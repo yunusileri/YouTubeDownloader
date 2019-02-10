@@ -19,6 +19,12 @@ def main():
         data = playList().playListuRL()
         for i in range(len(data)):
             Audio(data[i]).audioDownload()
+    elif key == 3:
+        print('Güle Güle')
+        exit(0)
+    else:
+        print('Bilmediğin Tuşlarla Oynama Amacamın Oğlu !!!')
+        return main()
 
 
 main()
