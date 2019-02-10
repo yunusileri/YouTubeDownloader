@@ -2,8 +2,8 @@ import pafy
 
 
 class playList:
-    def __init__(self, uRl):
-        self.uRl = uRl
+    def __init__(self):
+        self.uRl = input('İndirmek istediginiz videonun url adresini giriniz.\n')
 
     def playListuRL(self):
         plaListuRl = pafy.get_playlist(self.uRl)
@@ -11,6 +11,6 @@ class playList:
         data = []
         print(f'''{plaListuRl['title']} Listesinde Bulanan Videolar''')
         for i in range(playListUzunluk):
-            data.append(plaListuRl['items'][i]['pafy'].watch_url)
+            data.append(plaListuRl['items'][i]['pafy'].watchv_url)
             print(f'''{i + 1} {plaListuRl['items'][i]['pafy'].title}''')
         return data
